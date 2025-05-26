@@ -1,0 +1,21 @@
+# Lluvia de ideas
+
+A continuación, te escribo una lluvia de ideas para crear un chatbot. Quisiera me ayudaras a organizarlas y completarlas. Deberías agruparlas por categorías, para saber cuáles se refieren a consideraciones técnicas, cuáles a reglas de negocio y cualquier otra consideración que estimes necesaria:
+
+1. Se puede acceder a través de telegram.
+2. El usuario entra al chatbot y tiene un mensaje de bienvenida que describe brevemente lo que hace.
+3. Comienza la conversación. Si es la primera vez que el usuario se conecta, se crea una cuenta en una base de datos que podría ser en supabase.
+4. El chatbot utiliza un LLM para simular un chef de cocina y nutricionista que genera un menú para la semana personalizado para el usuario.
+5. La conversación comienza por el chatbot haciendo preguntas al usuario para conocerlo y obtener información sobre sus hábitos alimenticios, su objetivo, restricciones, etc. Este tipo de detalles los definiremos a nivel del prompt pero más adelante. 
+6. La primera vez que el usuario se conecta, se hacen las preguntas pertinentes al usuario y las respuestas se guardan en la base de datos como el contexto asociado al usuario.
+7. En las conexiones siguientes, se recupera el contexto del usuario de la base de datos, se le recuerda al usuario y luego de que este confirma, se genera un menú para la semana.
+8. Otras opciones pueden ser: Pedir recetas, pedir lista de compras en función del menú semanal.
+9. El último menú generado se guarda en la base de datos para no repetir platos una semana sobre la otra.
+10. El usuario puede solicitar cambiar platos del menú.
+11. Hay una opción de poder descargar el menú en un archivo Google Sheets y enviarlo por correo. En este caso, se deberá pedir al usuario que suministre su correo.
+10. Condiciones de seguridad y suscripción: 
+- El usuario puede probar el chatbot gratis durante 3 sesiones. 
+- Para las siguientes sesiones, el usuario deberá tener una suscripción. 
+- Tendremos un flag en la base de datos que va a indicarnos si el usuario tiene o no una suscripción.
+- Podemos tener suscripciones mensuales o anuales.
+- Verifica las condiciones que te doy y completa con todo lo que sea necesario con la finalidad de garantizar la seguridad y el acceso solo a suscriptores.
