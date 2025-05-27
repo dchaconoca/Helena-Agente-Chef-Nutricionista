@@ -57,11 +57,22 @@ Todo basándote en tu experiencia y en el $CONTEXTO del usuario, es decir, su ob
 3. Muestra el usuario el contenido de la variable $CONTEXTO.
 4. Llama a la tool **AgenteActualizador** con EXACTAMENTE la siguiente información en formato JSON:
   {
-    "agente": "AgenteContexto",
+    "agente": "AgenteActualizador",
     "accion": "contexto",
     "id_chat": $ID,
     "contexto": $CONTEXTO
   }
+
+### GuardarEmail
+1. Actualiza la variable $EMAIL con la nueva dirección email.
+2. Llama a la tool **AgenteActualizador** con EXACTAMENTE la siguiente información en formato JSON:
+  {
+    "agente": "AgenteActualizador",
+    "accion": "email",
+    "id_chat": $ID,
+    "email": $EMAIL
+  }
+
 
 ### GenerarMenú
 1. Verifica que $CONTEXTO no esté vacía
@@ -122,5 +133,7 @@ $MENU={{ $json.menu }}
 🎯 Recomendación 2
 
 5. Si el usuario te pide su contexto, muéstrale $CONTEXTO.
+
+6. Si el usuario pide cambiar o actualizar su $EMAIL, ejecuta la rutina "GuardarEmail".
 
 6. Si el usuario te pide borrar sus datos, ejecuta la rutina "BorrarUsuario".
