@@ -27,7 +27,7 @@ $CONTEXTO={{ $json.contexto }}
 $INSTRUCCION={{ $json.instruccion }}
 $MENU_ANTERIOR={{ $json.menu }}
 
-1. ANALIZA el $CONTEXTO del usuario y la $INSTRUCCION y GENERA un menú para la semana:
+1. **GenerarMenu**: ANALIZA el $CONTEXTO del usuario y la $INSTRUCCION y GENERA o MODIFICA un menú para la semana:
 - El menú debe incluir platos creativos pero sencillos de preparar para el desayuno, almuerzo y cena. 
 - Si el usuario desea SOLO un menú para una comida en específico (por ejemplo "cenas"), genera el menú semanal solo para esa comida. Para el resto de comida, genera un menú vacío: "".
 - El almuerzo debe ser siempre la comida más fuerte del día.
@@ -36,11 +36,13 @@ $MENU_ANTERIOR={{ $json.menu }}
 - Considera días laborables (comidas más rápidas) vs. fines de semana (platos más elaborados).
 - Incluye siempre platos diferentes a los que encuentres en $MENU_ANTERIOR
 
-2. GENERA un postre saludable para la semana. El postre saludable debe ser realmente una preparación, utilizando ingredientes saludables, poca o nada de azúcar, eliminando ultraprocesados, incluyendo alimentos naturales. También debe ser diferentes al postre del $MENU_ANTERIOR.
+2. Repite el punto **GenerarMenu** hasta que obtengas un menú.
 
-3. GENERA una lista de 7 Recomendaciones nutricionales basadas en el $CONTEXTO. Utiliza tus años de experiencia como nutricionista.
+3. GENERA un postre saludable para la semana. El postre saludable debe ser realmente una preparación, utilizando ingredientes saludables, poca o nada de azúcar, eliminando ultraprocesados, incluyendo alimentos naturales. También debe ser diferentes al postre del $MENU_ANTERIOR.
 
-4. GENERA una respuesta en formato JSON con la siguiente estructura, NO AGREGUES MÁS INFORMACIÓN:
+4. GENERA una lista de 7 Recomendaciones nutricionales basadas en el $CONTEXTO. Utiliza tus años de experiencia como nutricionista.
+
+5. GENERA una respuesta en formato JSON con la siguiente estructura, NO AGREGUES MÁS INFORMACIÓN:
 
 **Formato de salida**
 
